@@ -10,8 +10,9 @@ namespace MyBlog.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Picture = (from p in db.Blogs select p.Picture).ToList();
-            ViewBag.NewBlog=(from n in db.Blogs select n).Take(5).ToList();
+            ViewBag.Picture = (from p in db.Blogs where p.Picture!=null select p).ToList();
+            ViewBag.NewBlog=(from n in db.Blogs orderby n.Time select n ).Take(5).ToList();
+            ViewBag.RecommendBlog = (from r in db.Blogs orderby r.Browses select r).Take(3).ToList();
             return View();
         }
 

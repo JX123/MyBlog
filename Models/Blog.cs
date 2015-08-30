@@ -15,8 +15,14 @@ namespace MyBlog.Models
         public string Content { get; set; }
         [Index]
         public DateTime Time { get; set; }
-        public byte[] Picture { get; set; }
         public string Title { get; set; }
-        public bool IsPicture { get; set; }
+        public byte[] Picture { get; set; }
+        public virtual ICollection<Remark> Replies { get; set; }
+
+        /// <summary>
+        /// 浏览
+        /// </summary>
+        public int Browses { get; set; }
+        public string TypeBelonger { get; set; }
     }
 }

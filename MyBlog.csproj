@@ -132,8 +132,8 @@
     </Compile>
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\DB.cs" />
+    <Compile Include="Models\Life.cs" />
     <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\Remark.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,6 +12,7 @@ namespace MyBlog.Models
         public DbSet<Message> Messages { get; set; }
         public DbSet<Remark> Raemarks { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Life> Lifes { get; set; }
         public DB() : base("sqlserverdb") { }
     }
 }
